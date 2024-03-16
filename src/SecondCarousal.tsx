@@ -1,10 +1,11 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useEffect, useState } from "react";
 import { motion, useMotionValue } from "framer-motion";
 
 const imgs = [
-	"/src/assets/city1.png",
-	"/src/assets/city2.png",
-	"/src/assets/city3.png",
+	"/src/assets/city1.jpg",
+	"/src/assets/city2.jpg",
+	"/src/assets/city3.jpg",
 ];
 
 const ONE_SECOND = 1000;
@@ -77,7 +78,7 @@ export const SwipeCarousel = () => {
 	);
 };
 
-const Images = ({ imgIndex }) => {
+const Images = ({ imgIndex }: any) => {
 	return (
 		<>
 			{imgs.map((imgSrc, idx) => {
@@ -101,7 +102,8 @@ const Images = ({ imgIndex }) => {
 	);
 };
 
-const Dots = ({ imgIndex, setImgIndex }) => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const Dots = ({ imgIndex, setImgIndex }: any) => {
 	return (
 		<div className="mt-4 flex w-full justify-center gap-2">
 			{imgs.map((_, idx) => {
